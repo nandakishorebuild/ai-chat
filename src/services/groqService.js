@@ -1,6 +1,6 @@
 import axios from "axios"
 
-export const sendMessageToGemini = async (userMessage, chatHistory = []) => {
+export const sendMessageToGroq = async (userMessage, chatHistory = []) => {
 
   // Convert our messages to the format Groq API understands
   const formattedHistory = chatHistory.map((msg) => ({

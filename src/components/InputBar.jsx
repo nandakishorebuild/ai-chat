@@ -1,6 +1,6 @@
 import { useState } from "react"
 import { useChat } from "../context/ChatContext"
-import { sendMessageToGemini } from "../services/geminiService"
+import { sendMessageToGroq } from "../services/groqService"
 
 const InputBar = () => {
 
@@ -16,7 +16,7 @@ const InputBar = () => {
     setLoading(true)
 
     try {
-      const reply = await sendMessageToGemini(userMessage, messages)
+      const reply = await sendMessageToGroq(userMessage, messages)
       addMessage("ai", reply)
     } catch (error) {
       addMessage("ai", "Too many requests. Please wait a moment and try again.")

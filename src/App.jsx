@@ -11,7 +11,7 @@ const App = () => {
   const { clearChat } = useChat()
 
   return (
-    <div className="flex h-screen bg-[#1a1a1a]">
+    <div className="flex bg-[#1a1a1a]" style={{ height: "100%" }}>
 
       {/* Sidebar */}
       <Sidebar
@@ -21,10 +21,10 @@ const App = () => {
       />
 
       {/* Main area */}
-      <div className="flex flex-col flex-1 h-screen overflow-hidden">
+      <div className="flex flex-col flex-1 overflow-hidden" style={{ height: "100%" }}>
 
         {/* Header */}
-        <div className="bg-[#141414] border-b border-[#333333] px-4 py-3 flex items-center justify-between">
+        <div className="flex-shrink-0 bg-[#141414] border-b border-[#333333] px-4 py-3 flex items-center justify-between">
           <div className="flex items-center gap-3">
 
             {/* Hamburger - mobile only */}
@@ -61,7 +61,9 @@ const App = () => {
         <ChatWindow />
 
         {/* Input */}
-        <InputBar />
+        <div className="flex-shrink-0">
+          <InputBar />
+        </div>
 
       </div>
     </div>
