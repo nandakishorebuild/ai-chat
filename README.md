@@ -30,7 +30,7 @@ A modern, responsive AI chatbot web application powered by **React.js**, **Tailw
 | 🤖 Groq API | Language model API powering the core intelligence |
 | ✨ React Markdown | Rendering complex markdown syntax and code blocks in responses |
 | ⚡ Vite | Fast build tool and optimized development server |
-| 🌐 Vercel/Netlify | Seamless deployment and hosting |
+| 🌐 Vercel | Seamless deployment and hosting |
 
 ---
 
