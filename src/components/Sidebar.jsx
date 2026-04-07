@@ -9,7 +9,7 @@ const Sidebar = ({ isOpen, onClose, onClearChat }) => {
       {/* Overlay - mobile only */}
       {isOpen && (
         <div
-          className="fixed inset-0 bg-black bg-opacity-50 z-10 md:hidden"
+          className="fixed inset-0 bg-black bg-opacity-50 z-40 md:hidden"
           onClick={onClose}
         />
       )}
@@ -17,11 +17,11 @@ const Sidebar = ({ isOpen, onClose, onClearChat }) => {
       {/* Sidebar */}
       <div
         className={`
-          fixed top-0 left-0 h-full w-64 bg-[#141414] border-r border-[#333333]
-          flex flex-col gap-4 p-4 z-20
+          fixed top-0 left-0 h-[100dvh] w-64 bg-[#141414] border-r border-[#333333]
+          flex flex-col gap-4 p-4 z-50
           transition-transform duration-300
           ${isOpen ? "translate-x-0" : "-translate-x-full"}
-          md:static md:translate-x-0 md:flex md:w-64
+          md:static md:translate-x-0 md:flex md:w-64 md:h-full md:z-auto
         `}
       >
         {/* Logo */}

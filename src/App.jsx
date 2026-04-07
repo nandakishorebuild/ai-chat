@@ -11,7 +11,7 @@ const App = () => {
   const { clearChat } = useChat()
 
   return (
-    <div className="flex bg-[#1a1a1a]" style={{ height: "100%" }}>
+    <div className="flex bg-[#1a1a1a] h-full w-full overflow-hidden">
 
       {/* Sidebar */}
       <Sidebar
@@ -21,7 +21,7 @@ const App = () => {
       />
 
       {/* Main area */}
-      <div className="flex flex-col flex-1 overflow-hidden" style={{ height: "100%" }}>
+      <div className="flex flex-col flex-1 overflow-hidden h-full">
 
         {/* Header */}
         <div className="flex-shrink-0 bg-[#141414] border-b border-[#333333] px-4 py-3 flex items-center justify-between">
