@@ -1,76 +1,74 @@
 # 🤖 AI Chat Assistant
 
-A modern, responsive AI chatbot web application powered by **React.js**, **Tailwind CSS**, and **Groq AI**. Enjoy lightning-fast, highly accurate conversations with a sleek interface, complete with Markdown rendering and chat history.
+A modern AI-powered chat application built with React.js and Groq API (Llama 3). Clean Claude-inspired dark UI with full mobile and desktop support.
 
-🌐 **Live Demo:** [https://ai-chats-omega.vercel.app]
-📂 **GitHub:** [https://github.com/nandakishorebuild/ai-chat]
+🔗 **Live Demo:** [ai-chats-omega.vercel.app](https://ai-chats-omega.vercel.app/)
+📁 **GitHub:** [nandakishorebuild/ai-chat](https://github.com/nandakishorebuild/ai-chat)
 
 ---
 
-## 🚀 Features
+## 📸 Screenshots
 
-- 🔥 **Lightning-Fast AI** — Instant responses powered by Groq's incredibly fast inference API models
-- 📝 **Markdown Support** — Fully renders lists, code blocks, and formatted text directly in the chat using `react-markdown`
-- 📱 **Mobile-First Design** — Fully responsive layout featuring a collapsible sidebar and clean mobile views
-- 💬 **Smart Chat Interface** — Features auto-scrolling chat windows, typing indicators, and sleek custom chat bubbles
-- 🌙 **Sleek Dark UI** — An elegant, eye-friendly dark theme (`#1a1a1a`) optimized for long chatbot sessions
-- 🧹 **Session Management** — Clear your entire chat history seamlessly with a single click
-- 💾 **State Management** — Maintains conversation history and context easily using React Context API
+### 🖥️ Desktop View
+![Desktop View](https://i.postimg.cc/8cGGScCQ/chat-app-laptop-ui.png)
+
+### 📱 Mobile View
+![Mobile View](https://i.postimg.cc/mDGJcqWN/chat-app-mobile-ui.png)
+
+---
+
+## ✨ Features
+
+- 💬 Real-time AI chat powered by **Groq API (Llama 3)**
+- 📝 **Markdown rendering** — bold, lists, code blocks, headings
+- 📋 **Copy response** button on every AI message
+- 🧹 **Clear chat** to start fresh anytime
+- 📱 **Fully responsive** — mobile drawer sidebar + desktop layout
+- ⌨️ Send message with **Enter key** or send button
+- ⏳ **Typing indicator** while AI is responding
+- 🚫 Send button **disabled** while AI is responding (no spam)
+- 🌙 **Claude-inspired dark theme** UI
 
 ---
 
 ## 🛠️ Tech Stack
 
-| Technology | Usage |
+| Technology | Purpose |
 |---|---|
-| ⚛️ React.js | Frontend UI library |
-| 🗃️ React Context API | Global state management for chat history and loading states |
-| 🎨 Tailwind CSS v4 | Utility-first styling for the entire UI |
-| 📡 Axios | HTTP requests to Groq API |
-| 🤖 Groq API | Language model API powering the core intelligence |
-| ✨ React Markdown | Rendering complex markdown syntax and code blocks in responses |
-| ⚡ Vite | Fast build tool and optimized development server |
-| 🌐 Vercel | Seamless deployment and hosting |
+| React.js | Frontend UI |
+| Vite | Build tool |
+| Tailwind CSS v4 | Styling |
+| Context API | State management |
+| Groq API (Llama 3) | AI responses |
+| Axios | API calls |
+| React Markdown | Markdown rendering |
+| Vercel | Deployment |
 
 ---
 
-## 📁 Folder Structure
+## 📁 Project Structure
 
 ```
-ai-chat/
-├── public/                # Static public assets
-├── src/
-│   ├── assets/            # Static images, SVGs, and other local assets
-│   ├── components/
-│   │   ├── BotIcon.jsx         # SVG Icon for the AI Bot
-│   │   ├── ChatBubble.jsx      # Component rendering individual user/bot messages
-│   │   ├── ChatWindow.jsx      # Scrollable window displaying the message list
-│   │   ├── InputBar.jsx        # Text area for user input with a submit button
-│   │   ├── Sidebar.jsx         # Responsive sidebar for settings/history
-│   │   └── TypingIndicator.jsx # Animated indicator while waiting for bot
-│   ├── context/
-│   │   └── ChatContext.jsx     # React Context provider for global chat state
-│   ├── services/
-│   │   └── groqService.js      # Helper functions handling Groq API requests
-│   ├── App.jsx                 # Main application layout and routing
-│   ├── index.css               # Global styles and Tailwind configuration
-│   └── main.jsx                # React application entry point
-├── .env                        # Environment variables (not pushed to GitHub)
-├── package.json                # Dependencies and scripts tasks
-└── vite.config.js              # Vite bundler configuration
+src/
+├── context/
+│   └── ChatContext.jsx       # Global state - messages, loading
+├── components/
+│   ├── BotIcon.jsx           # Robot SVG avatar
+│   ├── TypingIndicator.jsx   # Animated dots while AI responds
+│   ├── ChatBubble.jsx        # User and AI message bubbles
+│   ├── ChatWindow.jsx        # Scrollable chat area
+│   ├── InputBar.jsx          # Text input and send button
+│   └── Sidebar.jsx           # Desktop sidebar + mobile drawer
+├── services/
+│   └── groqService.js        # Groq API call logic
+├── App.jsx                   # Main layout
+├── main.jsx                  # App entry point
+└── index.css                 # Global styles
 ```
 
 ---
 
-## 📡 API Endpoints Used
-
-| Purpose | Service / Endpoint |
-|---|---|
-| AI Chat Completions | Groq API (`https://api.groq.com/openai/v1/chat/completions`) |
-
----
-
-## ⚙️ Getting Started Locally
+## 🚀 Getting Started
 
 ### 1. Clone the repository
 
@@ -85,68 +83,54 @@ cd ai-chat
 npm install
 ```
 
-### 3. Create `.env` file in root folder
+### 3. Get your free Groq API key
 
-```env
+- Go to 👉 [console.groq.com](https://console.groq.com)
+- Sign up for free (no credit card required)
+- Create a new API key
+
+### 4. Create `.env` file in root folder
+
+```
 VITE_GROQ_API_KEY=your_groq_api_key_here
 ```
 
-> 🔑 Get your free API key from the [Groq Console](https://console.groq.com/)
-
-### 4. Start the development server
+### 5. Run the project
 
 ```bash
 npm run dev
 ```
 
-### 5. Open in browser
-
-```
-http://localhost:5173
-```
+Open [http://localhost:5173](http://localhost:5173) in your browser ✅
 
 ---
 
-## 🌐 Deployment
+## 🌐 Deployment on Vercel
 
-This project can be easily deployed on **Vercel** or **Netlify**.
-
-To deploy your own:
 1. Push your code to GitHub
-2. Import the repository on [vercel.com](https://vercel.com)
-3. Add the `VITE_GROQ_API_KEY` environment variable in the Vercel dashboard settings
-4. Click Deploy!
+2. Go to [vercel.com](https://vercel.com) and import your repo
+3. Add environment variable in Vercel:
+   - Key: `VITE_GROQ_API_KEY`
+   - Value: your Groq API key
+4. Click **Deploy** ✅
 
 ---
 
-## 📸 Screenshots
+## 🔑 Environment Variables
 
-### 🏠 Main Chat Interface
-> *desktop app view*
-`![Chat Interface](https://i.postimg.cc/8cGGScCQ/chat-app-laptop-ui.png)`
+| Variable | Description |
+|---|---|
+| `VITE_GROQ_API_KEY` | Your Groq API key from console.groq.com |
 
-### 📱 Mobile View
-> *mobile friendly view*
-`![Mobile View](https://i.postimg.cc/mDGJcqWN/chat-app-mobile-ui.png)`
+> ⚠️ Never push your `.env` file to GitHub. It is already added to `.gitignore` for safety.
 
 ---
 
-## 🧠 Key Concepts Implemented
-
-- ✅ **Context API** — Global state management for maintaining messages and UI loading states without prop drilling
-- ✅ **API Abstraction** — Clean service file separation (`groqService.js`) for keeping API logic distinct from UI components
-- ✅ **Markdown Rendering** — Custom rendering implementations handling structured AI text, bullet points, and code snippets correctly
-- ✅ **Responsive Layouts** — Implementation of conditional mobile rendering and a hamburger menu using Tailwind CSS
-- ✅ **Asynchronous Operations** — Proper handling of API promises, async/await functionality, and error catching
-- ✅ **Conditional Rendering** — Polished loading indicators (TypingIndicator) and empty-state placeholders
-
----
-
-## 👨💻 Author
+## 👨‍💻 Author
 
 **Nanda Kishore**
-- GitHub: [@nandakishorebuild] (https://github.com/nandakishorebuild)
-- Live: [https://ai-chats-omega.vercel.app]
+- 🐙 GitHub: [@nandakishorebuild](https://github.com/nandakishorebuild)
+- 💼 LinkedIn: [linkedin.com/in/nandakishore](https://www.linkedin.com/in/nandakishore3960)
 
 ---
 
